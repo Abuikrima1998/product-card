@@ -22,6 +22,7 @@ checkSpeed(400000000);
 
 const product = "Книга";
 const price = 800;
+
 function buyProduct(budget) {
   if (budget >= price) {
     console.log(`${product} приобретен. Спасибо за покупку!`);
