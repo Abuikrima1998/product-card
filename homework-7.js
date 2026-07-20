@@ -4,12 +4,11 @@ function showWeather(city, temperature) {
 showWeather("Нальчик", 25);
 
 
-const speedOfLight = 299792458;
+const SPEED_OF_LIGHT = 299792458;
 function checkSpeed(speed) {
-  if (speed > speedOfLight) {
+  if (speed > SPEED_OF_LIGHT) {
     console.log("Сверхсветовая скорость")
-  }
-  else if (speed < speedOfLight) {
+  } else if (speed < SPEED_OF_LIGHT) {
     console.log("Субсветовая скорость");
   }
   else {
