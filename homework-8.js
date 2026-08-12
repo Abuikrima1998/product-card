@@ -25,13 +25,13 @@ function addMaxSpeed(car) {
 
 addMaxSpeed(car);
 
-function getProperty(object, property) {
+function getObjectProperty(object, property) {
   console.log(object[property]);
 }
 
-getProperty(car, "model");
-getProperty(user, "city");
-getProperty(car, "color");
+getObjectProperty(car, "model");
+getObjectProperty(user, "city");
+getObjectProperty(car, "color");
 
 const products = [
   "Milk",
@@ -105,7 +105,7 @@ const harryPotterBooks = [
 
 const allBooks = [...books, ...harryPotterBooks];
 
-function markRareBooks(books) {
+function getRareBooks(books) {
   return books.map((book) => {
     return {
       ...book,
@@ -114,7 +114,7 @@ function markRareBooks(books) {
   });
 }
 
-const booksWithRareStatus = markRareBooks(allBooks);
+const booksWithRareStatus = getRareBooks(allBooks);
 
 console.log(booksWithRareStatus);
 console.log(products);
