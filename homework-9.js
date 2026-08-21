@@ -15,11 +15,13 @@ const cars = ["BMW", "Toyota", "Audi", "Mercedes", "Honda"];
 console.log(cars.includes("BMW"));
 
 function reverseArray(array) {
-  return array.reverse();
+ array.reverse();
 }
 
-console.log(reverseArray(numbers));
-console.log(reverseArray(cars));
+reverseArray(numbers);
+console.log(numbers);
+reverseArray(cars);
+console.log(cars);
 
 const comComments = comments.filter(function (comment) {
   return comment.email.includes(".com");
@@ -28,16 +30,10 @@ const comComments = comments.filter(function (comment) {
 console.log(comComments);
 
 const changedComments = comments.map(function (comment) {
-  if (comment.id <= 5) {
     return {
       ...comment,
-      postId: 2
+      postId: comment.id <= 5 ? 2 : 1
     };
-  }
-  return {
-    ...comment,
-    postId: 1
-  };
 });
 
 console.log(changedComments);
@@ -80,3 +76,4 @@ console.log(emailsString);
 const emailsJoined = emails.join(", ");
 
 console.log(emailsJoined);
+
